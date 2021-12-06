@@ -19,7 +19,7 @@ const Img = styled.div`
     heigth: 150px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('https://sytopyano.com.ua/wp-content/uploads/2020/04/Coca-Cola-05.png');
+    background-image: url('http://localhost:3001/${props => props.photo}');
     border-radius: 10px;
 `
 
@@ -41,7 +41,7 @@ const BucketItem = ({ item, setTotal }) => {
         <>
             { !showItem ? null : (
                 <StyledBucketItem>
-                    <Img />
+                    <Img photo={item.photo} />
                     <Informer>
                         <p>Name: { item.name } </p>
                         <p>Price: { item.price }</p>
